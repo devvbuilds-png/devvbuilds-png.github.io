@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>should dev come to VibeCon?</title>
+<title>should dev get a chance to interview?</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -363,8 +363,8 @@
   <div class="rule top"></div>
   <div class="rule bottom"></div>
 
-  <div class="meta tl">VibeCon / 2026</div>
-  <div class="meta tr">invitation · 001</div>
+  <div class="meta tl">opportunity / 2026</div>
+  <div class="meta tr">interview · 001</div>
   <div class="meta bl">status: pending</div>
   <div class="meta br">
     <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -393,8 +393,7 @@
     <section class="card" id="card">
       <span class="eyebrow">the question</span>
       <h1 class="headline">
-        should dev come to<br>
-        <span class="accent">VibeCon</span>?
+        should dev get a chance<br>to <span class="accent">interview</span>?
       </h1>
       <p class="subtext">// you already know the answer.</p>
       <div class="buttons">
@@ -406,9 +405,9 @@
     <section class="thanks" id="thanks" aria-hidden="true">
       <div class="thanks-inner">
         <span class="eyebrow">confirmed</span>
-        <h2>you're the best.<br>send the invite to</h2>
+        <h2>you're the best.<br>send the interview invite to</h2>
         <div class="email">devvbuilds@gmail.com 👀</div>
-        <div class="footer-note">see you at VibeCon</div>
+        <div class="footer-note">see you in the interview</div>
         <button class="btn-back" id="btnBack" type="button">← back</button>
       </div>
     </section>
@@ -450,6 +449,10 @@
 
   btnNo.addEventListener('click', function (e) {
     e.preventDefault();
+    if (noStep === noLabels.length - 1) {
+      btnYes.click();
+      return;
+    }
     bumpNo();
   });
 
